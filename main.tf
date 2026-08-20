@@ -35,7 +35,7 @@ resource "aws_eks_node_group" "node-grp" {
   node_role_arn   = aws_iam_role.worker.arn
   subnet_ids      = data.aws_subnets.available-subnets.ids
   capacity_type   = "ON_DEMAND"
-  disk_size       = "20"
+  disk_size       = "40"
   instance_types  = ["c7i-flex.large"]
   labels = tomap({ env = "dev" })
 
